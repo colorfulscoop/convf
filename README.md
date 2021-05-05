@@ -1,8 +1,6 @@
 # seqop
 
-seqop is a **seq**uence **op**eration tool to filter and transform text sequence data.
-
-ConvKit provides tools to support preprocessing conversation data.
+seqop is a **seq**uence **op**eration tool to filter and transform text sequence data (e.g. conversaiton data).
 
 ## Feature
 
