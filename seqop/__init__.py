@@ -6,3 +6,4 @@ from .operation import MaxTurnFilter
 from .operation import MinTurnFilter
 from .operation import DenyRegexFilter
 from .operation import ReplaceTransform
+from .operation import FunctionTransform

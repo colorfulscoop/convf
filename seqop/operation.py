@@ -74,6 +74,17 @@ class DenyRegexFilter:
         return not any(re.search(self._regex, text) for text in conv)
 
 
+class FunctionTransform:
+    def __init__(self, function: str):
+        self._func = load_module(function)
+
+    def get_operation_type(self) -> OperationType:
+        return OperationType.TRANSFORM
+
+    def __call__(self, conv) -> bool:
+        return self._func(conv)
+
+
 class ReplaceTransform:
     def __init__(self, regex: str, replacement: str):
         self._regex = regex

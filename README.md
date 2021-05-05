@@ -23,6 +23,19 @@ seqop provides a command line tool of `seqop` .
 
 Prepare conversation data with Json Line format.
 
-```
+```sh
 head -n1000 test.jsonl  | seqop pipeline --config_file pipeline.yaml
 ```
+
+## Operation
+
+| Name | Operation type |
+| --- | --- |
+| seqop.FunctionFilter | FILTER |
+| seqop.MaxLenFilter | FILTER |
+| seqop.MinLenFilter | FILTER |
+| seqop.MaxTurnFilter | FILTER |
+| seqop.MinTurnFilter | FILTER |
+| seqop.DenyRegexFilter | FILTER |
+| seqop.FunctionTransform | TRANSFORM |
+| seqop.ReplaceTransform | TRANSFORM |
