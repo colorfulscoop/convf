@@ -2,12 +2,7 @@ import json
 import sys
 from envyaml import EnvYAML
 from .operation import OperationType
-
-
-def load_module(name: str):
-    components = name.split(".")
-    mod = __import__(".".join(components[:-1]), fromlist=[components[-1]])
-    return getattr(mod, components[-1])
+from .loader import load_module
 
 
 class Main:

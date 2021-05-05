@@ -1,10 +1,22 @@
 import enum
 import re
+from .loader import load_module
 
 
 class OperationType(enum.Enum):
     FILTER = enum.auto()
     TRANSFORM = enum.auto()
+
+
+class FunctionFilter:
+    def __init__(self, function: str):
+        self._func = load_module(function)
+
+    def get_operation_type(self) -> OperationType:
+        return OperationType.FILTER
+
+    def __call__(self, conv) -> bool:
+        return self._func(conv)
 
 
 class MaxLenFilter:
