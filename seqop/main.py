@@ -1,7 +1,7 @@
 import json
 import sys
 from envyaml import EnvYAML
-from .component import ComponentType
+from .operation import OperationType
 
 
 def load_module(name: str):
@@ -28,20 +28,20 @@ class Main:
             filter_result = True
 
             for component in pipeline:
-                component_type = component.get_component_type()
+                op_type = component.get_operation_type()
 
                 # Change a behavior of each component based on its component type
-                if component_type == ComponentType.FILTER:
+                if op_type == OperationType.FILTER:
                     if not component(conv):
                         filter_result = False
                         break
-                elif component_type == ComponentType.TRANSFORM:
+                elif op_type == OperationType.TRANSFORM:
                     conv = component(conv)
                 else:
                     raise Exception(
-                        f"Component type of {component_type} "
+                        f"Component type of {op_type} "
                         f"for {component.__class__.__name__} "
-                        f"should be one of [{ComponentType.FILTER}, {ComponentType.TRANSFORM}]"
+                        f"should be one of [{OperationType.FILTER}, {OperationType.TRANSFORM}]"
                     )
 
             if not filter_result:
