@@ -1,0 +1,8 @@
+pipeline:
+  - name: convf.MinTurnFilter
+    params:
+      min_turn: 2
+  - name: convf.ReplaceTransform
+    params:
+      regex: "!"
+      replacement: "."

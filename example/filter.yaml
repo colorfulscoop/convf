@@ -1,0 +1,4 @@
+pipeline:
+  - name: convf.MinTurnFilter
+    params:
+      min_turn: 2
