@@ -2,25 +2,26 @@ import setuptools
 
 
 setuptools.setup(
-    name="seqop",
+    name="convf",
     packages=setuptools.find_packages(),
     install_requires=[
         "fire>=0.4.0,<0.5",
         "envyaml>=1.0,<2.0",
     ],
-    entry_points={
-        'console_scripts': ["seqop=seqop.main:entrypoint"]
-    },
     extras_require={
         "test": ["pytest>=5", "black==20.8b1"],
     },
+    # If installing this script to the global name space, remove the folloing comment
+    #entry_points={
+    #    'console_scripts': ["convf=convf.__main__:entrypoint"]
+    #},
     version="0.0.0",
     author="Colorful Scoop",
 
     # Description info
-    url="https://github.com/colorfulscoop/seqop",
+    url="https://github.com/colorfulscoop/convf",
     description=(
-        "seqop is a sequence operation tool to filter and transform text sequence data."
+        "convf is a tool to filter and transform conversation data."
     ),
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",

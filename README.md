@@ -1,6 +1,6 @@
-# seqop
+# convf
 
-seqop is a **seq**uence **op**eration tool to filter and transform text sequence data (e.g. conversaiton data).
+convf is a tool to filter and transform conversation data.
 
 ## Feature
 
@@ -9,31 +9,31 @@ seqop is a **seq**uence **op**eration tool to filter and transform text sequence
 
 ## Installation
 
-Install Python >= 3.8. Then install seqop.
+Install Python >= 3.8. Then install convf.
 
 ```sh
-$ pip install git+https://github.com/colorfulscoop/seqop
+$ pip install git+https://github.com/colorfulscoop/convf
 ```
 
 ## Usage
 
-seqop provides a command line tool of `seqop` .
+convf provides a command line tool of `convf` .
 
 Prepare conversation data with Json Line format.
 
 ```sh
-head -n1000 test.jsonl  | seqop pipeline --config_file pipeline.yaml
+$ head -n1000 test.jsonl  | python -m convf pipeline --config_file pipeline.yaml | jq
 ```
 
 ## Operation
 
 | Name | Operation type |
 | --- | --- |
-| seqop.FunctionFilter | FILTER |
-| seqop.MaxLenFilter | FILTER |
-| seqop.MinLenFilter | FILTER |
-| seqop.MaxTurnFilter | FILTER |
-| seqop.MinTurnFilter | FILTER |
-| seqop.DenyRegexFilter | FILTER |
-| seqop.FunctionTransform | TRANSFORM |
-| seqop.ReplaceTransform | TRANSFORM |
+| convf.FunctionFilter | FILTER |
+| convf.MaxLenFilter | FILTER |
+| convf.MinLenFilter | FILTER |
+| convf.MaxTurnFilter | FILTER |
+| convf.MinTurnFilter | FILTER |
+| convf.DenyRegexFilter | FILTER |
+| convf.FunctionTransform | TRANSFORM |
+| convf.ReplaceTransform | TRANSFORM |

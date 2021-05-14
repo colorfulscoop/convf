@@ -47,12 +47,3 @@ class Main:
             # Show result
             res = json.dumps(conv)
             print(res)
-
-
-def entrypoint():
-    import fire
-    fire.Fire(Main)
-
-
-if __name__ == "__main__":
-    entrypoint()
