@@ -45,5 +45,5 @@ class Main:
             # Transforms
 
             # Show result
-            res = json.dumps(conv)
+            res = json.dumps(conv, ensure_ascii=False)
             print(res)
