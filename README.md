@@ -4,8 +4,7 @@ convf is a tool to filter and transform conversation data.
 
 ## Feature
 
-* Easy to understand your pipeline
-* Easy to manage reproducibility
+* convf handles series of filters and transformations defined in a YAML configuration file which is readable and easy to reproduce the preprocessing.
 
 ## Installation
 
