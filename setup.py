@@ -15,7 +15,7 @@ setuptools.setup(
     #entry_points={
     #    'console_scripts': ["convf=convf.__main__:entrypoint"]
     #},
-    version="0.0.0",
+    version="0.1.0",
     author="Colorful Scoop",
 
     # Description info
